@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arnold Green Market Agencies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background-color: #000;
+      color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    nav {
+      background-color: #111;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #eee;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-switcher {
+      margin-top: 10px;
+    }
+    .lang-switcher button {
+      background-color: gold;
+      color: #000;
+      border: none;
+      margin: 0 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .service {
+      background-color: #111;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .service h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Arnold Green Market Logo" />
+    <h1 id="title">Arnold Green Market Agencies</h1>
+    <p id="subtitle"><em>Real Estate, Automotive, Transportation & More</em></p>
+    <div class="lang-switcher">
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('lg')">Luganda</button>
+      <button onclick="switchLang('rn')">Runyankole</button>
+    </div>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="content">
+    <h2 id="services-title">Our Services</h2>
+
+    <div class="service">
+      <h3 id="realestate-title">Real Estate</h3>
+      <p id="realestate-desc">Buy, sell, or rent properties with trusted agents who know the local market.</p>
+    </div>
+    <div class="service">
+      <h3 id="automotive-title">Automotive</h3>
+      <p id="automotive-desc">Reliable car sales, maintenance, and transport solutions for individuals and businesses.</p>
+    </div>
+    <!-- Add other services here as before with ids -->
+
+  </div>
+  <footer>
+    <p id="contact">Contact us: WhatsApp +256756866335 | Email: arnoldgreen463@gmail.com</p>
+    <p>&copy; 2025 Arnold Green Market Agencies</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Arnold Green Market Agencies",
+        subtitle: "Real Estate, Automotive, Transportation & More",
+        servicesTitle: "Our Services",
+        realestateTitle: "Real Estate",
+        realestateDesc: "Buy, sell, or rent properties with trusted agents who know the local market.",
+        automotiveTitle: "Automotive",
+        automotiveDesc: "Reliable car sales, maintenance, and transport solutions for individuals and businesses.",
+        contact: "Contact us: WhatsApp +256756866335 | Email: arnoldgreen463@gmail.com"
+      },
+      lg: {
+        title: "Arnold Green Market Agencies",
+        subtitle: "Obutunzi, Magari, Okutambuza n'ebirala",
+        servicesTitle: "Ebiruubirira Byaffe",
+        realestateTitle: "Obutunzi",
+        realestateDesc: "Gula, tunda oba osasule ennyumba n'abasuubuzi abeesigika.",
+        automotiveTitle: "Magari",
+        automotiveDesc: "Magari ageesigika, okuwoleza, n'okutambuza abantu n'ebintu.",
+        contact: "Tukikwasiza: WhatsApp +256756866335 | Email: arnoldgreen463@gmail.com"
+      },
+      rn: {
+        title: "Arnold Green Market Agencies",
+        subtitle: "Embeera, Motoka, Okutwara & Ebindi",
+        servicesTitle: "Ebyokora Byaitu",
+        realestateTitle: "Embeera",
+        realestateDesc: "Gura, tunda cana kobwa enyumba hamwe n'abatekinisa b'amaani.",
+        automotiveTitle: "Motoka",
+        automotiveDesc: "Motoka ez'amaani, obwokwiriza, n'okutwara abantu n'ebintu.",
+        contact: "Kutuhikireho: WhatsApp +256756866335 | Email: arnoldgreen463@gmail.com"
+      }
+    };
+
+    function switchLang(lang) {
+      document.getElementById('title').innerText = translations[lang].title;
+      document.getElementById('subtitle').innerText = translations[lang].subtitle;
+      document.getElementById('services-title').innerText = translations[lang].servicesTitle;
+      document.getElementById('realestate-title').innerText = translations[lang].realestateTitle;
+      document.getElementById('realestate-desc').innerText = translations[lang].realestateDesc;
+      document.getElementById('automotive-title').innerText = translations[lang].automotiveTitle;
+      document.getElementById('automotive-desc').innerText = translations[lang].automotiveDesc;
+      document.getElementById('contact').innerText = translations[lang].contact;
+    }
+  </script>
+</body>
+</html>
